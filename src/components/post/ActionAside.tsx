@@ -23,11 +23,11 @@ const shareList = [
     },
   },
   {
-    name: '复制链接',
+    name: 'Link',
     icon: 'icon-link',
     onClick: (data: ShareData) => {
       navigator.clipboard.writeText(data.url)
-      toast.success('已复制到剪贴板')
+      toast.success('Successfully copied the link.')
     },
   },
 ]
@@ -41,7 +41,6 @@ export function ActionAside() {
       }}
     >
       <ShareButton />
-      <DonateButton />
     </div>
   )
 }
@@ -80,12 +79,12 @@ function ShareModal({ url, text }: { url: string; text: string }) {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.8 }}
     >
-      <h2 className="px-3 py-1 font-bold">分享此内容</h2>
+      <h2 className="px-3 py-1 font-bold">Share this content</h2>
       <hr className="my-2 border-primary" />
       <div className="px-3 py-2 grid grid-cols-[180px_auto] gap-3">
         <QR.QRCodeSVG value={url} size={180} />
         <div className="flex flex-col gap-2">
-          <div className="text-sm">分享到...</div>
+          <div className="text-sm">Share to...</div>
           <ul className="flex flex-col gap-2">
             {shareList.map((item) => (
               <li

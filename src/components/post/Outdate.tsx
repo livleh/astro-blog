@@ -7,7 +7,7 @@ export function Outdate({ lastMod }: { lastMod: Date }) {
 
   useEffect(() => {
     const diffDays = getDiffInDays(lastMod)
-    if (diffDays > 30) {
+    if (false/*diffDays > 30*/) {
       setIsShow(true)
     }
   }, [lastMod])
@@ -22,9 +22,10 @@ export function Outdate({ lastMod }: { lastMod: Date }) {
           exit={{ opacity: 0 }}
         >
           <span>
-            这篇文章最后修改于 {getFormattedDate(lastMod)}
-            ，部分内容可能已经不适用，如有疑问可联系作者。
+            Last modified on {getFormattedDate(lastMod)}. 
+            Some content may be outdated. Contact me if you have any questions.
           </span>
+
         </motion.div>
       )}
     </AnimatePresence>

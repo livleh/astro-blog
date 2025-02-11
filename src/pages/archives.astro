@@ -8,13 +8,13 @@ import { TimelineProgress } from '@/components/TimelineProgress'
 const oldestPosts = await getOldestPosts()
 ---
 
-<PageLayout title="归档">
+<PageLayout title="Archive">
   <div class="max-w-[800px] mx-auto px-4 py-16">
     <header class="space-y-4 mb-8">
       <h1 class="text-4xl font-bold">
-        <Highlight>归档</Highlight>
+        <Highlight>Archive</Highlight>
       </h1>
-      <p>共产出 {oldestPosts.length} 篇文章，再接再厉。</p>
+      <p>Published {oldestPosts.length} articles 💪</p>
       <hr class="w-[100px] border-primary" />
       <TimelineProgress client:load />
     </header>
