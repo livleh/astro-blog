@@ -22,7 +22,7 @@ export function PostCopyright({
 
   function handleCopyUrl() {
     navigator.clipboard.writeText(url)
-    toast.success('已复制文章链接')
+    toast.success('Article link copied')
   }
 
   useEffect(() => {
